@@ -1,0 +1,3 @@
+/serverVenv
+db.sqlite3
+.env

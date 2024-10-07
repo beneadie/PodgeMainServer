@@ -1,0 +1,42 @@
+POST http://127.0.0.1:8000/authenticate/signup
+Content-Type: application/json
+
+{ "username": "stellabella","email": "ben97@mail.com", "password": "Lollypop01" }
+
+###
+
+POST http://127.0.0.1:8000/authenticate/login
+Content-Type: application/json
+
+{ "username": "ben97", "password": "ben1234" }
+
+###
+
+GET http://127.0.0.1:8000/authenticate/test_token
+Content-Type: application/json
+Authorization: Token 8169911816bf68d2a8d4351943e229e6ad0a734d
+
+###
+
+POST http://127.0.0.1:8000/authenticate/logout
+Content-Type: application/json
+Authorization: Token d6931e235f382e694a011d57ac3dced510f62674
+
+###
+
+POST http://127.0.0.1:8000/authenticate/change_password
+Content-Type: application/json
+Authorization: Token d53aeb85934f7d2f7aba9190255e58df1367a206
+
+{"username" : "beneadie",
+"old_password": "Lollypop01",
+"new_password": "lollypop01"}
+
+###
+
+DELETE http://127.0.0.1:8000/authenticate/delete_account
+Content-Type: application/json
+Authorization: Token 8b4ae1039530639071e13c8b94b01c12d29ff5c1
+
+{"username" : "stellabella",
+"user_password": "Lollypop01"}
